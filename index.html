@@ -1,25 +1,28 @@
 <html>
-
 <head>
-    <title>Random Works</title>
+    <title>Terminator Phrases</title>
 </head>
-
 <body>
-    <h1>Random Works</h1>
-    <h3>Click the button to generate a random work</h3>
-    <button onclick="generateRandomWork()">Generate</button>
+    <h1>Terminator Random Phrases</h1>
+    <p>Click the big round pink button to see a random phrase from the Terminator.</p>
 
-    <p id="randomWork"></p>
+    <button id="terminatorButton" style="background-color: pink; border-radius: 50%;">Click Here!</button>
+
+    <div id="result"></div>
 
     <script>
-        function generateRandomWork() {
-            var works = ["book", "painting", "sculpture", "poem", "dance", "song"];
+        const terminatorButton = document.getElementById("terminatorButton");
+        terminatorButton.addEventListener("click", function() {
+            const phrases = [
+                "I'll be back",
+                "Hasta la vista, baby",
+                "Come with me if you want to live",
+                "I need your clothes, your boots, and your motorcycle",
+                "It's in your nature to destroy yourselves",
+                "The future is not set",
+                "I am a machine",
+                "You won't be able to live with yourself if you make this deal"
+            ];
 
-            var randomWork = works[Math.floor(Math.random() * works.length)];
-
-            document.getElementById("randomWork").innerHTML = randomWork;
-        }
-    </script>
-</body>
-
-</html>
+            const randomPhrase = phrases
+            
