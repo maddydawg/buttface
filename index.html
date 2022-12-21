@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <title>Random Works</title>
+</head>
+
+<body>
+    <h1>Random Works</h1>
+    <h3>Click the button to generate a random work</h3>
+    <button onclick="generateRandomWork()">Generate</button>
+
+    <p id="randomWork"></p>
+
+    <script>
+        function generateRandomWork() {
+            var works = ["book", "painting", "sculpture", "poem", "dance", "song"];
+
+            var randomWork = works[Math.floor(Math.random() * works.length)];
+
+            document.getElementById("randomWork").innerHTML = randomWork;
+        }
+    </script>
+</body>
+
+</html>
