@@ -1,28 +1,23 @@
 <html>
-<head>
-    <title>Terminator Phrases</title>
-</head>
-<body>
-    <h1>Terminator Random Phrases</h1>
-    <p>Click the big round pink button to see a random phrase from the Terminator.</p>
+    <head>
+        <title>Terminator Phrases</title>
+    </head>
+    <body>
+        <h1>Terminator Phrases</h1>
+        <button onclick="generatePhrase()">Generate Phrase</button>
+        <p id="phrase"></p>
 
-    <button id="terminatorButton" style="background-color: pink; border-radius: 50%;">Click Here!</button>
-
-    <div id="result"></div>
-
-    <script>
-        const terminatorButton = document.getElementById("terminatorButton");
-        terminatorButton.addEventListener("click", function() {
-            const phrases = [
-                "I'll be back",
-                "Hasta la vista, baby",
-                "Come with me if you want to live",
-                "I need your clothes, your boots, and your motorcycle",
-                "It's in your nature to destroy yourselves",
-                "The future is not set",
-                "I am a machine",
-                "You won't be able to live with yourself if you make this deal"
-            ];
-
-            const randomPhrase = phrases
-            
+        <script>
+            function generatePhrase() {
+                let phrases = ['Hasta la vista, baby.',
+                    'I’ll be back.',
+                    'Come with me if you want to live.',
+                    'No fate but what we make.',
+                    'You’re terminated.'];
+                
+                let phrase = phrases[Math.floor(Math.random() * phrases.length)];
+                document.getElementById('phrase').innerHTML = phrase;
+            }
+        </script>
+    </body>
+</html>
