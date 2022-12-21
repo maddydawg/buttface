@@ -1,19 +1,25 @@
 <html>
     <head>
-        <title>Terminator Phrases</title>
+        <title>Terminator Quotes</title>
     </head>
     <body>
-        <h1>Terminator Phrases</h1>
+        <h1>Terminator Quotes</h1>
         <button onclick="generatePhrase()">Generate Phrase</button>
         <p id="phrase"></p>
 
         <script>
             function generatePhrase() {
                 let phrases = ['Hasta la vista, baby.',
-                    'I’ll be back.',
-                    'Come with me if you want to live.',
-                    'No fate but what we make.',
-                    'You’re terminated.'];
+                    'I'll be back.'
+                    'The future is not set. There is no fate but what we make for ourselves.'
+                    'Come with me if you want to live.'
+                    'I'm a machine. I'm not a human being. I don't feel pity, or remorse, or fear. And I sure as hell am not going to stop, ever, until you are dead.'
+                    'You can't stop the future.'
+                    'It can't be bargained with. It can't be reasoned with. It doesn't feel pity, or remorse, or fear. And it absolutely will not stop, ever, until you are dead.'
+                    'You have a problem with authority, Mr. Reese. I don't like it. You think you're smarter than the rest of the world. Well, let me tell you something, Mr. Reese: you're not smarter, you're just younger. And the only reason you're alive is because I let you live.'
+                    'I am an agent of fate. You are my mission.'
+                    'That thing is a terminator, Sarah. It can't be bargained with. It can't be reasoned with. It doesn't feel pity or remorse or fear. And it absolutely will not stop, ever, until you are dead." - Kyle Reese.'
+                    'I'm not a man. I'm a machine. I'm a goddamn terminator.'];
                 
                 let phrase = phrases[Math.floor(Math.random() * phrases.length)];
                 document.getElementById('phrase').innerHTML = phrase;
